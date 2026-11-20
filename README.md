@@ -4,6 +4,10 @@ A YouTube search API by [FAK LABS](https://faizankhichi.me/). Search YouTube vid
 
 > **This repo is documentation only.** It describes the public endpoint and how to use it. It contains no code.
 
+## Read this in your language
+
+- [English](README.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [Français](README.fr.md) · [Español](README.es.md) · [اردو](README.ur.md) · [Kiswahili](README.sw.md) · [Deutsch](README.de.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [پښتو](README.ps.md) · [فارسی](README.fa.md) · [简体中文](README.zh.md)
+
 ## Endpoint
 
 ```
