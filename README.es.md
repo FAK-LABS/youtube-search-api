@@ -19,11 +19,11 @@ Cada solicitud devuelve JSON limpio. El único parámetro obligatorio es `q`.
 ## Inicio rápido
 
 ```bash
-curl "https://yt-api.faizankhichi.me/?q=lofi"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22"
 ```
 
 ```js
-const res = await fetch("https://yt-api.faizankhichi.me/?q=lofi&type=video&duration=short");
+const res = await fetch("https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&type=video&duration=short");
 const data = await res.json();
 data.results.forEach(v => console.log(v.title, v.url));
 ```
@@ -48,13 +48,13 @@ Los filtros se combinan libremente — todos los parámetros funcionan juntos:
 
 ```bash
 # vídeos cortos subidos esta semana, los más vistos primero
-curl "https://yt-api.faizankhichi.me/?q=lofi&type=video&duration=short&uploaded=week&sort=view_count"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&type=video&duration=short&uploaded=week&sort=view_count"
 
 # canales, en urdu, para Pakistán
 curl "https://yt-api.faizankhichi.me/?q=naat&type=channel&hl=ur&gl=PK"
 
 # vídeos en HD con subtítulos
-curl "https://yt-api.faizankhichi.me/?q=lofi&features=hd,subtitles"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&features=hd,subtitles"
 ```
 
 ## Respuesta
@@ -74,12 +74,12 @@ Campos de nivel superior:
 
 ### Ejemplo de respuesta
 
-`GET https://yt-api.faizankhichi.me/?q=lofi&maxResults=2`
+`GET https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&maxResults=2`
 
 ```json
 {
   "success": true,
-  "query": "lofi",
+  "query": "\"FAK LABS\"",
   "count": 2,
   "source": "youtubei",
   "filters": {
@@ -92,32 +92,31 @@ Campos de nivel superior:
     "maxResults": 2,
     "features": []
   },
-  "nextPageToken": "EpkDEgRsb2ZpGpADRWdJUUFV...",
+  "nextPageToken": "ErsCEgoiRkFLIExBQlMiGqwCRWdJUUFVZ...",
   "results": [
     {
       "type": "video",
-      "id": "nx32Ue0AAA0",
-      "title": "a rainy night 🌧️ lofi rain for deep focus",
+      "id": "PlQvsgrxoEo",
+      "title": "Faizan Ahmad Khichi website Studio Free website hosting free website templates Easy to use #FAK",
       "description": "",
       "channel": {
-        "id": "UCSJ4gkVC6NrvII8umztf0Ow",
-        "name": "Lofi Girl",
-        "avatar": "https://yt3.ggpht.com/REcZL_LGu0DaDaC-G7VIbN0uE_5l-i_dw6ZvOETRnY3pRhUmfkOq6C1MLephPZkV4VSzQAhEi_4=s88-c-k-c0x00ffffff-no-rj"
+        "id": "UCBfjw4aRQSbtHMz5zBGHSjA",
+        "name": "Faizan Ahmad Khichi | FAK LABS",
+        "avatar": "https://yt3.ggpht.com/WzEKmlgEaE6PC-ic8a_xgF5zIAlZd37WjHq5apzlNgEMH6zdZvPQVI8cm8AcbQ4lAcrhNWss=s68-c-k-c0x00ffffff-no-rj"
       },
       "thumbnails": [
-        { "url": "https://i.ytimg.com/vi/nx32Ue0AAA0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWXzhp-Yo5_hpKK838kAJD9LFfIA", "width": 360, "height": 202 },
-        { "url": "https://i.ytimg.com/vi/nx32Ue0AAA0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6NBjFWdI7sdBoFySfs_k0X7JWvw", "width": 720, "height": 404 }
+        { "url": "https://i.ytimg.com/vi/PlQvsgrxoEo/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCg2EtEoJ3ga8IhiF_TslOFfdv2Vg", "width": 480, "height": 270 }
       ],
-      "thumbnail": "https://i.ytimg.com/vi/nx32Ue0AAA0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6NBjFWdI7sdBoFySfs_k0X7JWvw",
-      "duration": "8:00:00",
-      "durationSeconds": 28800,
-      "views": "190,198 views",
-      "publishedAt": "1 day ago",
+      "thumbnail": "https://i.ytimg.com/vi/PlQvsgrxoEo/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCg2EtEoJ3ga8IhiF_TslOFfdv2Vg",
+      "duration": "8:49",
+      "durationSeconds": 529,
+      "views": "115 views",
+      "publishedAt": "1 year ago",
       "isLive": false,
       "isUpcoming": false,
       "hasCaptions": false,
-      "badges": ["New"],
-      "url": "https://www.youtube.com/watch?v=nx32Ue0AAA0"
+      "badges": [],
+      "url": "https://www.youtube.com/watch?v=PlQvsgrxoEo"
     }
   ]
 }
@@ -202,11 +201,11 @@ Los resultados en vivo son objetos de vídeo (`type=video`) con `isLive: true`, 
 
 ```bash
 # página 1
-curl "https://yt-api.faizankhichi.me/?q=lofi&maxResults=5"
-# → "nextPageToken": "EpkDEgRsb2Zp..."
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&maxResults=5"
+# → "nextPageToken": "ErsCEgoiRkFLI..."
 
 # página 2 — misma consulta y filtros, más el token
-curl "https://yt-api.faizankhichi.me/?q=lofi&maxResults=5&pageToken=EpkDEgRsb2Zp..."
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&maxResults=5&pageToken=ErsCEgoiRkFLI..."
 ```
 
 Las páginas nunca repiten resultados. Pedir `maxResults` por encima de 20 completa la respuesta desde otras páginas automáticamente, así que una sola solicitud puede devolver hasta 50 resultados.
@@ -214,14 +213,14 @@ Las páginas nunca repiten resultados. Pedir `maxResults` por encima de 20 compl
 ## Sugerencias de búsqueda
 
 ```bash
-curl "https://yt-api.faizankhichi.me/?q=lofi&suggest=1"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&suggest=1"
 ```
 
 ```json
 {
   "success": true,
-  "query": "lofi",
-  "suggestions": ["lofi", "lofi coffee shop", "lofi fireplace", "..."]
+  "query": "\"FAK LABS\"",
+  "suggestions": []
 }
 ```
 
