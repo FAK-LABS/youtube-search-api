@@ -19,11 +19,11 @@ Setiap permintaan mengembalikan JSON yang bersih. Satu-satunya parameter wajib a
 ## Mulai cepat
 
 ```bash
-curl "https://yt-api.faizankhichi.me/?q=lofi"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22"
 ```
 
 ```js
-const res = await fetch("https://yt-api.faizankhichi.me/?q=lofi&type=video&duration=short");
+const res = await fetch("https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&type=video&duration=short");
 const data = await res.json();
 data.results.forEach(v => console.log(v.title, v.url));
 ```
@@ -48,13 +48,13 @@ Filter dapat digabung bebas — setiap parameter bekerja bersama:
 
 ```bash
 # video pendek yang diunggah minggu ini, paling banyak ditonton dulu
-curl "https://yt-api.faizankhichi.me/?q=lofi&type=video&duration=short&uploaded=week&sort=view_count"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&type=video&duration=short&uploaded=week&sort=view_count"
 
 # channel, dalam bahasa Urdu, untuk Pakistan
 curl "https://yt-api.faizankhichi.me/?q=naat&type=channel&hl=ur&gl=PK"
 
 # video HD dengan subtitle
-curl "https://yt-api.faizankhichi.me/?q=lofi&features=hd,subtitles"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&features=hd,subtitles"
 ```
 
 ## Respons
@@ -74,12 +74,12 @@ Kolom tingkat atas:
 
 ### Contoh respons
 
-`GET https://yt-api.faizankhichi.me/?q=lofi&maxResults=2`
+`GET https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&maxResults=2`
 
 ```json
 {
   "success": true,
-  "query": "lofi",
+  "query": "\"FAK LABS\"",
   "count": 2,
   "source": "youtubei",
   "filters": {
@@ -92,32 +92,31 @@ Kolom tingkat atas:
     "maxResults": 2,
     "features": []
   },
-  "nextPageToken": "EpkDEgRsb2ZpGpADRWdJUUFV...",
+  "nextPageToken": "ErsCEgoiRkFLIExBQlMiGqwCRWdJUUFVZ...",
   "results": [
     {
       "type": "video",
-      "id": "nx32Ue0AAA0",
-      "title": "a rainy night 🌧️ lofi rain for deep focus",
+      "id": "PlQvsgrxoEo",
+      "title": "Faizan Ahmad Khichi website Studio Free website hosting free website templates Easy to use #FAK",
       "description": "",
       "channel": {
-        "id": "UCSJ4gkVC6NrvII8umztf0Ow",
-        "name": "Lofi Girl",
-        "avatar": "https://yt3.ggpht.com/REcZL_LGu0DaDaC-G7VIbN0uE_5l-i_dw6ZvOETRnY3pRhUmfkOq6C1MLephPZkV4VSzQAhEi_4=s88-c-k-c0x00ffffff-no-rj"
+        "id": "UCBfjw4aRQSbtHMz5zBGHSjA",
+        "name": "Faizan Ahmad Khichi | FAK LABS",
+        "avatar": "https://yt3.ggpht.com/WzEKmlgEaE6PC-ic8a_xgF5zIAlZd37WjHq5apzlNgEMH6zdZvPQVI8cm8AcbQ4lAcrhNWss=s68-c-k-c0x00ffffff-no-rj"
       },
       "thumbnails": [
-        { "url": "https://i.ytimg.com/vi/nx32Ue0AAA0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWXzhp-Yo5_hpKK838kAJD9LFfIA", "width": 360, "height": 202 },
-        { "url": "https://i.ytimg.com/vi/nx32Ue0AAA0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6NBjFWdI7sdBoFySfs_k0X7JWvw", "width": 720, "height": 404 }
+        { "url": "https://i.ytimg.com/vi/PlQvsgrxoEo/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCg2EtEoJ3ga8IhiF_TslOFfdv2Vg", "width": 480, "height": 270 }
       ],
-      "thumbnail": "https://i.ytimg.com/vi/nx32Ue0AAA0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6NBjFWdI7sdBoFySfs_k0X7JWvw",
-      "duration": "8:00:00",
-      "durationSeconds": 28800,
-      "views": "190,198 views",
-      "publishedAt": "1 day ago",
+      "thumbnail": "https://i.ytimg.com/vi/PlQvsgrxoEo/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCg2EtEoJ3ga8IhiF_TslOFfdv2Vg",
+      "duration": "8:49",
+      "durationSeconds": 529,
+      "views": "115 views",
+      "publishedAt": "1 year ago",
       "isLive": false,
       "isUpcoming": false,
       "hasCaptions": false,
-      "badges": ["New"],
-      "url": "https://www.youtube.com/watch?v=nx32Ue0AAA0"
+      "badges": [],
+      "url": "https://www.youtube.com/watch?v=PlQvsgrxoEo"
     }
   ]
 }
@@ -202,11 +201,11 @@ Hasil live adalah objek video (`type=video`) dengan `isLive: true`, tanpa `durat
 
 ```bash
 # halaman 1
-curl "https://yt-api.faizankhichi.me/?q=lofi&maxResults=5"
-# → "nextPageToken": "EpkDEgRsb2Zp..."
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&maxResults=5"
+# → "nextPageToken": "ErsCEgoiRkFLI..."
 
 # halaman 2 — kueri dan filter yang sama, ditambah token
-curl "https://yt-api.faizankhichi.me/?q=lofi&maxResults=5&pageToken=EpkDEgRsb2Zp..."
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&maxResults=5&pageToken=ErsCEgoiRkFLI..."
 ```
 
 Halaman tidak pernah mengulang hasil. Meminta `maxResults` di atas 20 akan mengisi respons dari halaman-halaman berikutnya secara otomatis, jadi satu permintaan bisa mengembalikan hingga 50 hasil.
@@ -214,14 +213,14 @@ Halaman tidak pernah mengulang hasil. Meminta `maxResults` di atas 20 akan mengi
 ## Saran pencarian
 
 ```bash
-curl "https://yt-api.faizankhichi.me/?q=lofi&suggest=1"
+curl "https://yt-api.faizankhichi.me/?q=%22FAK%20LABS%22&suggest=1"
 ```
 
 ```json
 {
   "success": true,
-  "query": "lofi",
-  "suggestions": ["lofi", "lofi coffee shop", "lofi fireplace", "..."]
+  "query": "\"FAK LABS\"",
+  "suggestions": []
 }
 ```
 
